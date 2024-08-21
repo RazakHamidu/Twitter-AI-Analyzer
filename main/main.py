@@ -71,8 +71,6 @@ improve_r = model.invoke(improve).content
 
 
 
-# image section 
-
 def genera_percentuale():
     # Genera un numero casuale tra 5 e 50
     percentuale = random.uniform(5, 50)
@@ -84,30 +82,33 @@ def genera_percentuale():
 
 
 if st.button("Invia"):
+    if tweet_prompt == "":
+        st.write("La casella e vuota")
+       
+    else: 
+        progress_text = "Analisi del tweet in corso...."
+        my_bar = st.progress(0, text=progress_text)
 
-    progress_text = "Analisi del tweet in corso...."
-    my_bar = st.progress(0, text=progress_text)
+        for percent_complete in range(100):
+            time.sleep(0.01)
+            my_bar.progress(percent_complete + 1, text=progress_text)
+            time.sleep(1)
 
-    for percent_complete in range(100):
-        time.sleep(0.01)
-        my_bar.progress(percent_complete + 1, text=progress_text)
-    time.sleep(1)
+        
+        st.subheader("⭐ Rating", divider="gray")
+        
+        col1, col2 = st.columns(2)
+        col1.metric(label="Possibilità di viralità (Attuale)", value=viralità_r, delta=genera_percentuale(), delta_color="inverse")
+        col2.metric(label="Possibilità di viralità (Miglioranto)", value="10/10", delta="100%", delta_color="normal")
 
-    
-    st.subheader("⭐ Rating", divider="gray")
-    
-    col1, col2 = st.columns(2)
-    col1.metric(label="Possibilità di viralità (Attuale)", value=viralità_r, delta=genera_percentuale(), delta_color="inverse")
-    col2.metric(label="Possibilità di viralità (Miglioranto)", value="10/10", delta="100%", delta_color="normal")
+        st.subheader("✅ Feedback: ", divider="gray")
+        container = st.container(border=True)
+        container.write(f"{feedback_r}")
 
-    st.subheader("✅ Feedback: ", divider="gray")
-    container = st.container(border=True)
-    container.write(f"{feedback_r}")
+        st.subheader("🤖 Improved Tweet Improvement:", divider="gray")
+        st.code(textwrap.fill(improve_r, width=60), language="text")
+        my_bar.empty()
 
-    st.subheader("🤖 Improved Tweet Improvement:", divider="gray")
-    st.code(textwrap.fill(improve_r, width=60), language="text")
-    my_bar.empty()
-
-
-# todo: Aggiugere il color pallate di x e font 
-# todo: Aggiugere la funzionalità di non inviare input se la casella e vuota 
+# todo: Aggiunto la funzionalità di non inviare input se la casella e vuota 
+# todo: capire come struttura meglio il progetto 
+# todo: Depeload in online
