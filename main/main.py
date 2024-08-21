@@ -3,6 +3,7 @@ from langchain_openai import ChatOpenAI
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 import streamlit as st 
 import textwrap 
+import random
 
 
 
@@ -71,17 +72,30 @@ improve_r = model.invoke(improve).content
 
 # image section 
 
-
+def genera_percentuale():
+    # Genera un numero casuale tra 5 e 50
+    percentuale = random.uniform(5, 50)
+    # Arrotonda il risultato a due decimali per ottenere una percentuale con due cifre decimali
+    return f"{round(percentuale, 2)}%"
 
 if st.button("Invia"):
 
     
-    st.subheader("⭐ Rating")
-    # container.write(f":  {viralità_r}")
+    st.subheader("⭐ Rating", divider="gray")
+    
+    col1, col2 = st.columns(2)
+    col1.metric(label="Possibilità di viralità (Attuale)", value=viralità_r, delta=genera_percentuale(), delta_color="inverse")
+    col2.metric(label="Possibilità di viralità (Miglioranto)", value="10/10", delta="100%", delta_color="normal")
 
-    st.subheader("✅ Feedback: ")
+    st.subheader("✅ Feedback: ", divider="gray")
     container = st.container(border=True)
     container.write(f"{feedback_r}")
 
-    st.subheader("🤖 Improved Tweet Improvement:")
+    st.subheader("🤖 Improved Tweet Improvement:", divider="gray")
     st.code(textwrap.fill(improve_r, width=60), language="text")
+
+
+# todo: - Migliorare il out section 
+# todo: - Aggiugere la barra di progressione
+# todo: - Aggiugere  La Metrica di viralità
+# todo: Aggiugere il color pallate di x e font 
