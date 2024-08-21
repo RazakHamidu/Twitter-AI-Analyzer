@@ -8,11 +8,6 @@ import time
 
 
 
-from streamlit_extras.stylable_container import stylable_container
-
-with open("C:\\Users\\Razak\\Desktop\\Twitter AI Analyzer\\main\pino.css") as f:
-    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-
 load_dotenv()
 
 st.title("Rendi virali i tuoi tweets con AI")
@@ -110,5 +105,4 @@ if st.button("Invia"):
         my_bar.empty()
 
 # todo: capire come struttura meglio il progetto 
-# todo: postalo sul github
 # todo: Depeload in online
