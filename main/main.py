@@ -2,6 +2,9 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 import streamlit as st 
+import textwrap 
+
+
 
 from streamlit_extras.stylable_container import stylable_container
 
@@ -9,15 +12,8 @@ with open("C:\\Users\\Razak\\Desktop\\Twitter AI Analyzer\\main\pino.css") as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 load_dotenv()
-with stylable_container(
-    key="Titolo", 
-    css_styles="""
-        h1 {
-             text-align: center;
-        }
-    """
-):
-    st.title("Make Your Tweets Go Viral With The World's First Al-Powered Tweet Improver.")
+
+st.title("Rendi virali i tuoi tweets con AI")
 
 model = ChatOpenAI(model="gpt-4o-mini") 
 
@@ -79,9 +75,13 @@ improve_r = model.invoke(improve).content
 
 if st.button("Invia"):
 
+    
+    st.subheader("⭐ Rating")
+    # container.write(f":  {viralità_r}")
+
+    st.subheader("✅ Feedback: ")
     container = st.container(border=True)
-    container.write(f"⭐ Rating:  {viralità_r}")
-    container.write("✅ Feedback: ")
     container.write(f"{feedback_r}")
-    container.write("🤖 Improved Tweet Improvement:")
-    container.write(f"{improve_r}")
+
+    st.subheader("🤖 Improved Tweet Improvement:")
+    st.code(textwrap.fill(improve_r, width=60), language="text")
