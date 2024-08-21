@@ -109,6 +109,5 @@ if st.button("Invia"):
     my_bar.empty()
 
 
-# todo: - Aggiugere la barra di progressione
 # todo: Aggiugere il color pallate di x e font 
 # todo: Aggiugere la funzionalità di non inviare input se la casella e vuota 
