@@ -3,13 +3,25 @@ from langchain_openai import ChatOpenAI
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 import streamlit as st 
 
-with open("pino") as f:
+from streamlit_extras.stylable_container import stylable_container
+
+with open("C:\\Users\\Razak\\Desktop\\Twitter AI Analyzer\\main\pino.css") as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 load_dotenv()
-st.title("Make Your Tweets Go Viral With The World's First Al-Powered Tweet Improver.")
+with stylable_container(
+    key="Titolo", 
+    css_styles="""
+        h1 {
+             text-align: center;
+        }
+    """
+):
+    st.title("Make Your Tweets Go Viral With The World's First Al-Powered Tweet Improver.")
 
 model = ChatOpenAI(model="gpt-4o-mini") 
+
+
 
 tweet_prompt = st.text_area(label="", placeholder="Inserisci il tuo tweet", height=237)
 
