@@ -83,7 +83,7 @@ def genera_percentuale():
 
 if st.button("Invia"):
     if tweet_prompt == "":
-        st.write("La casella e vuota")
+        st.warning('La casella del tweet e vuota', icon="⚠️")
        
     else: 
         progress_text = "Analisi del tweet in corso...."
@@ -109,6 +109,6 @@ if st.button("Invia"):
         st.code(textwrap.fill(improve_r, width=60), language="text")
         my_bar.empty()
 
-# todo: Aggiunto la funzionalità di non inviare input se la casella e vuota 
 # todo: capire come struttura meglio il progetto 
+# todo: postalo sul github
 # todo: Depeload in online
