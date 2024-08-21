@@ -3,8 +3,8 @@ from langchain_openai import ChatOpenAI
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 import streamlit as st 
 
-
-
+with open("pino") as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 load_dotenv()
 st.title("Make Your Tweets Go Viral With The World's First Al-Powered Tweet Improver.")
