@@ -4,6 +4,7 @@ from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 import streamlit as st 
 import textwrap 
 import random
+import time
 
 
 
@@ -78,7 +79,19 @@ def genera_percentuale():
     # Arrotonda il risultato a due decimali per ottenere una percentuale con due cifre decimali
     return f"{round(percentuale, 2)}%"
 
+
+
+
+
 if st.button("Invia"):
+
+    progress_text = "Analisi del tweet in corso...."
+    my_bar = st.progress(0, text=progress_text)
+
+    for percent_complete in range(100):
+        time.sleep(0.01)
+        my_bar.progress(percent_complete + 1, text=progress_text)
+    time.sleep(1)
 
     
     st.subheader("⭐ Rating", divider="gray")
@@ -93,9 +106,9 @@ if st.button("Invia"):
 
     st.subheader("🤖 Improved Tweet Improvement:", divider="gray")
     st.code(textwrap.fill(improve_r, width=60), language="text")
+    my_bar.empty()
 
 
-# todo: - Migliorare il out section 
 # todo: - Aggiugere la barra di progressione
-# todo: - Aggiugere  La Metrica di viralità
 # todo: Aggiugere il color pallate di x e font 
+# todo: Aggiugere la funzionalità di non inviare input se la casella e vuota 
