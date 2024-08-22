@@ -103,6 +103,3 @@ if st.button("Invia"):
         st.subheader("🤖 Improved Tweet Improvement:", divider="gray")
         st.code(textwrap.fill(improve_r, width=60), language="text")
         my_bar.empty()
-
-# todo: capire come struttura meglio il progetto 
-# todo: Depeload in online
