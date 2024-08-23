@@ -1,20 +1,21 @@
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 import streamlit as st 
 import textwrap 
 import random
 import time
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 
 
-load_dotenv()
+load_dotenv(find_dotenv())
 
 st.title("Rendi virali i tuoi tweets con AI")
 
-model = ChatOpenAI(model="gpt-4o-mini") 
-
-
+model = ChatGoogleGenerativeAI(
+    model="gemini-1.5-flash",
+)
 
 tweet_prompt = st.text_area(label="", placeholder="Inserisci il tuo tweet", height=237)
 
@@ -42,7 +43,7 @@ feedback =  [
     AIMessage(content="Il tweet ha un messaggio positivo e incoraggiante, che può risuonare bene con chi cerca ispirazione per la giornata. Tuttavia, potrebbe non avere un impatto virale elevato poiché è piuttosto generico e privo di elementi distintivi o di attualità. Per aumentare la probabilità di viralità, potresti considerare di aggiungere un elemento personale, una storia breve o una domanda che stimoli la partecipazione degli utenti. Inoltre, l'uso di hashtag è corretto, ma una combinazione di hashtag più mirati o di tendenze attuali potrebbe aiutare a raggiungere un pubblico più ampio."),
     HumanMessage(content=tweet_prompt)
 ]
-
+    
 
 feedback_r = model.invoke(feedback).content
 
@@ -65,12 +66,11 @@ improve_r = model.invoke(improve).content
 
 
 
-
 def genera_percentuale():
     # Genera un numero casuale tra 5 e 50
     percentuale = random.uniform(5, 50)
     # Arrotonda il risultato a due decimali per ottenere una percentuale con due cifre decimali
-    return f"{round(percentuale, 2)}%"
+    return f"{round(percentuale, 2)}%"""
 
 
 
@@ -82,14 +82,15 @@ if st.button("Invia"):
        
     else: 
         progress_text = "Analisi del tweet in corso...."
+    
         my_bar = st.progress(0, text=progress_text)
 
         for percent_complete in range(100):
             time.sleep(0.01)
             my_bar.progress(percent_complete + 1, text=progress_text)
-            time.sleep(1)
+        time.sleep(1)
+        my_bar.empty()
 
-        
         st.subheader("⭐ Rating", divider="gray")
         
         col1, col2 = st.columns(2)
@@ -102,4 +103,4 @@ if st.button("Invia"):
 
         st.subheader("🤖 Improved Tweet Improvement:", divider="gray")
         st.code(textwrap.fill(improve_r, width=60), language="text")
-        my_bar.empty()
+        
