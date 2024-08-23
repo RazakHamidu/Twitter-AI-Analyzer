@@ -1,6 +1,6 @@
 langchain
 langchain-core
 langchain-community
-langchain-openai
-openai
+streamlit
 python-dotenv
+langchain_google_genai
