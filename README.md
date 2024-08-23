@@ -139,7 +139,7 @@ Questa directory contiene i diagrammi di progettazione del sistema.
 
 Trovi i diagrammi di sequenza e del sistema nella cartella `design/`:
 
-- **[Sequence Diagram.pn](design/Sequence%20Diagram.pn)**: Mostra la sequenza delle interazioni tra i componenti del sistema, evidenziando come i dati e le richieste si spostano attraverso il sistema durante l'elaborazione del tweet.
-- **[System Diagram.pn](design/System%20Diagram.pn)**: Fornisce una panoramica dell'architettura complessiva del sistema, visualizzando i principali componenti e le loro interazioni.
+- **[Sequence Diagram.pn](design/Sequence%20Diagram..png)**: Mostra la sequenza delle interazioni tra i componenti del sistema, evidenziando come i dati e le richieste si spostano attraverso il sistema durante l'elaborazione del tweet.
+- **[System Diagram.pn](design/System%20Diagram..png)**: Fornisce una panoramica dell'architettura complessiva del sistema, visualizzando i principali componenti e le loro interazioni.
 
 I diagrammi sono salvati nel formato `.pn` e possono essere visualizzati con strumenti di grafica compatibili o convertiti in altri formati per una visualizzazione più comoda.
