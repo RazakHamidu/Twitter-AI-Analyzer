@@ -191,5 +191,5 @@ Questo progetto è concesso in licenza con la [MIT License](LICENSE).
 
 ## Contatti
 
-Per qualsiasi domanda o supporto, contatta [tuo-email@example.com](mailto:tuo-email@example.com).
+Per qualsiasi domanda o supporto, contatta [Linkedln](mailto:https://www.linkedin.com/in/razak-hamidu).
 
