@@ -142,4 +142,54 @@ Trovi i diagrammi di sequenza e del sistema nella cartella `design/`:
 - **[Sequence Diagram.pn](design/Sequence%20Diagram..png)**: Mostra la sequenza delle interazioni tra i componenti del sistema, evidenziando come i dati e le richieste si spostano attraverso il sistema durante l'elaborazione del tweet.
 - **[System Diagram.pn](design/System%20Diagram..png)**: Fornisce una panoramica dell'architettura complessiva del sistema, visualizzando i principali componenti e le loro interazioni.
 
-I diagrammi sono salvati nel formato `.pn` e possono essere visualizzati con strumenti di grafica compatibili o convertiti in altri formati per una visualizzazione più comoda.
+## Requisiti
+
+Per eseguire **Twitter AI Analyzer**, assicurati di avere i seguenti requisiti:
+
+### Software
+
+- **Python**: Versione 3.7 o superiore
+
+### Pacchetti Python
+
+Installa le dipendenze necessarie utilizzando il file `requirements.txt`. Esegui il comando seguente per installare tutti i pacchetti richiesti:
+
+```bash
+ pip install -r requirements.txt
+```
+### Pacchetti Principali
+
+Il file `requirements.txt` include i seguenti pacchetti principali:
+
+- **`streamlit`**: Per creare l'interfaccia utente web.
+- **`langchain_google_genai`**: Per l'integrazione con i modelli generativi AI di Google.
+- **`langchain_core`**: Per la gestione dei messaggi e delle interazioni con l'AI.
+- **`python-dotenv`**: Per gestire le variabili d'ambiente.
+
+### Variabili d'Ambiente
+
+Crea un file `.env` nella directory principale del progetto e aggiungi le seguenti variabili d'ambiente necessarie:
+
+- **`GOOGLE_API_KEY`**: La chiave API per l'accesso ai modelli AI di Google.
+- **Altre variabili**: Eventuali altre configurazioni specifiche per il tuo ambiente.
+
+Assicurati che le variabili d'ambiente siano configurate correttamente per l'esecuzione dell'applicazione.
+
+## Contribuire
+
+Contributi sono benvenuti! Per contribuire al progetto, segui questi passaggi:
+
+1. **Fork il repository**: Crea una copia del repository nel tuo account GitHub.
+2. **Crea un branch per le tue modifiche**: Nella tua copia del repository, crea un nuovo branch per lavorare sulle tue modifiche.
+3. **Invia una pull request**: Una volta completate le modifiche, invia una pull request al repository originale con una descrizione dettagliata delle modifiche che hai apportato.
+
+Grazie per il tuo interesse e contributo al progetto!
+
+## Licenza
+
+Questo progetto è concesso in licenza con la [MIT License](LICENSE).
+
+## Contatti
+
+Per qualsiasi domanda o supporto, contatta [tuo-email@example.com](mailto:tuo-email@example.com).
+
