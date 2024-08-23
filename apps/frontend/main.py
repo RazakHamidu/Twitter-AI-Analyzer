@@ -1,6 +1,6 @@
 import streamlit as st 
-import time
 import textwrap 
+import time
 import sys
 import os
 
@@ -8,6 +8,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from backend.model import Ffeedback, Fimprove, Fviralità
 from backend.utils import genera_percentuale
+
 
 
 
