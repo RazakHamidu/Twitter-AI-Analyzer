@@ -187,7 +187,7 @@ Grazie per il tuo interesse e contributo al progetto!
 
 ## Licenza
 
-Questo progetto è concesso in licenza con la [MIT License](LICENSE).
+Questo progetto è concesso in licenza con la [MIT License](LICENSE.txt).
 
 ## Contatti
 
