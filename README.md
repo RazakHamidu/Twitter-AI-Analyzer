@@ -1,7 +1,7 @@
 # Twitter AI Analyzer
 
-**Twitter AI Analyzer** è una web app interattiva progettata per aiutare gli utenti a ottimizzare i loro tweet e massimizzare la loro viralità. Con la crescente competizione sui social media, può essere difficile capire quali contenuti hanno il potenziale per attirare l'attenzione e generare coinvolgimento. Questa applicazione utilizza l'intelligenza artificiale per affrontare questo problema in tre modi principali:
-
+**Twitter AI Analyzer** è una web app interattiva progettata per aiutare gli utenti a ottimizzare i loro tweet e massimizzare la loro viralità. Con la crescente competizione sui social media, può essere difficile capire quali contenuti hanno il potenziale per attirare l'attenzione e generare coinvolgimento. Questa applicazione utilizza l'intelligenza artificiale per affrontare questo problema in tre modi principali: [Link alla versione LIVE
+](https://twitter-ai-analyzer.streamlit.app/)
 1. **Valutazione della Viralità**: Fornisce una valutazione dettagliata della probabilità che un tweet diventi virale, aiutando gli utenti a comprendere l'efficacia del loro contenuto.
 
 2. **Feedback Costruttivo**: Offre feedback mirato sui tweet, suggerendo aree di miglioramento per aumentare l'attrattiva e il coinvolgimento del pubblico.
