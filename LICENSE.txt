@@ -1,0 +1,9 @@
+MIT License
+
+Copyright (c) 2024 Razak Hamidu
+
+Permesso è concesso, gratuitamente, a chiunque ottenga una copia di questo software e dei file di documentazione associati (il "Software"), di trattare il Software senza restrizioni, inclusi, ma non limitati a, i diritti di utilizzare, copiare, modificare, fondere, pubblicare, distribuire, sublicenziare e/o vendere copie del Software, e di permettere a chiunque a cui il Software sia fornito di farlo, soggetto alle seguenti condizioni:
+
+La sopra indicata avvertenza di copyright e questa dichiarazione di permesso devono essere incluse in tutte le copie o parti sostanziali del Software.
+
+IL SOFTWARE È FORNITO "COSÌ COM'È", SENZA GARANZIE DI ALCUN TIPO, ESPRESSE O IMPLICITE, INCLUSI MA NON LIMITATI A GARANZIE DI COMMERCIABILITÀ, IDONEITÀ PER UNO SCOPO PARTICOLARE E NON VIOLAZIONE. IN NESSUN CASO GLI AUTORI O I DETENTORI DEL COPYRIGHT SARANNO RESPONSABILI PER QUALSIASI RECLAMO, DANNO O ALTRA RESPONSABILITÀ, SIA IN UN'AZIONE DI CONTRATTO, TORTO O ALTRIMENTI, DERIVANTE DA, O IN CONNESSIONE CON IL SOFTWARE O L'UTILIZZO O ALTRO TIPO DI MANIPOLAZIONE DEL SOFTWARE.

@@ -69,12 +69,9 @@ if st.button("Invia"):
 
         # Sezione per visualizzare il feedback sul tweet
         st.subheader("✅ Feedback: ", divider="gray")
-        container = st.container(border=True)
-        container.write(f"{Ffeedback(tweet_prompt)}")  # Mostra il feedback ricevuto dalla funzione Ffeedback
+        st.write(f"{Ffeedback(tweet_prompt)}")  
 
-        # Sezione per visualizzare il tweet migliorato
+
         st.subheader("🤖 Improved Tweet Improvement:", divider="gray")
-        st.code(
-            textwrap.fill(Fimprove(tweet_prompt), width=60),  # Mostra il tweet migliorato con formattazione
-            language="text"
-        )
+        container = st.container(border=True)
+        container.write(f"{Fimprove(tweet_prompt)}") 
