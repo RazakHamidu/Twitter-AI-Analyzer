@@ -67,7 +67,7 @@ Segui questi passaggi per configurare il progetto:
 
 5. **Esegui l'Applicazione**
    ```bash
-   streamlit run frontend/main.py
+   streamlit run main.py
 
 ## Utilizzo
 
