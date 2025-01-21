@@ -48,7 +48,7 @@ Segui questi passaggi per configurare il progetto:
 1. **Clona il Repository**
 
    ```bash
-   git clone https://github.com/PKGEMER86/Twitter-AI-Analyzer.git
+   git clone https://github.com/RazakHamidu/Twitter-AI-Analyzer.git
    cd twitter-ai-analyzer
 
 2. **Crea e Attiva un Ambiente Virtuale**
